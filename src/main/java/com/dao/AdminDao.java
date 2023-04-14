@@ -1,0 +1,28 @@
+package com.dao;
+
+import com.bean.AdminBean;
+import com.bean.UserBean;
+import com.util.PageUtil;
+
+import java.sql.SQLException;
+
+public interface AdminDao {
+    public boolean adminAccounExit(String aName) throws Exception;
+
+    public int save(AdminBean adminBean) throws SQLException;
+
+    public AdminBean adminLoginByName(AdminBean adminBean) throws Exception;
+
+    public AdminBean adminLoginByPhone(String tel) throws Exception;
+
+    public int adminModifyPwd(AdminBean adminBean) throws Exception;
+
+    public boolean adminAccounExitByTel(String aTel) throws Exception;
+
+    public int deleteUser(String uName) throws Exception;
+
+    public int modifyUser(UserBean userBean) throws Exception;
+
+    public PageUtil queryAllComments(UserBean userBean, int pageSize, int currentPage) throws Exception;
+
+}
